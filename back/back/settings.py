@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=7-4k6z^6g7a0_$20qobzj*ui$)zsmzj6kp9@*!zs)_@!51*6h'
+SECRET_KEY = '6nm@pvzf_o#f_de-f$*vfd9%li2+g66+5z)jn##vzw8i-j#tl%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,17 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    #model
-    'back'
-    #connect with react
-
 ]
-#connetc with react
-
-
-#end of connect with react
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -57,8 +47,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    #connect with react
-
 ]
 
 ROOT_URLCONF = 'back.urls'
