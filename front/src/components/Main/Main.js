@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Navbar, Nav, Card} from 'react-bootstrap';
-import LogPage from "components/LogPage/LogPage";
-import SU from "components/SU/SU";
+import LogPage from "../LogPage/LogPage";
+import SU from "../SU/SU";
 
 class Main extends Component {
     state = {
