@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Navbar, Nav, Card} from 'react-bootstrap';
-import LogPage from "../LogPage/LogPage";
+import Fail2banLog from "../Fail2banLog/Fail2banLogPage";
 import SU from "../SU/SU";
 import LastLog from "../LastLog/LastLogPage"
 import LastbLog from "../LastbLog/LastbLogPage"
@@ -10,7 +10,7 @@ class Main extends Component {
         pageStatus: 0,
     };
 
-    _goLogPage = () => {
+    _goFail2banLog = () => {
         this.setState({
             pageStatus: 0,
         });
@@ -37,7 +37,7 @@ class Main extends Component {
     render(){
         const page = this.state.pageStatus;
         let currentPage;
-        if (page === 0) currentPage = <LogPage/>;
+        if (page === 0) currentPage = <Fail2banLog/>;
         else if (page == 1) currentPage = <SU/>;
         else if (page == 2 ) currentPage = <LastLog/>;
         else currentPage = <LastbLog/>;
@@ -49,7 +49,7 @@ class Main extends Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link onClick={this._goLogPage}>Log Page</Nav.Link>
+                            <Nav.Link onClick={this._goFail2banLog}>Fail2ban Log Page</Nav.Link>
                             <Nav.Link onClick={this._goSU}>SU command</Nav.Link>
                             <Nav.Link onClick={this._goLastLog}>Last</Nav.Link>
                             <Nav.Link onClick={this._goLastbLog}>Lastb</Nav.Link>

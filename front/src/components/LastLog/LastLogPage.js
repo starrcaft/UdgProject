@@ -15,7 +15,7 @@ class LogPage extends Component {
 
     async componentDidMount(){
       try {
-        const res = await fetch('http://127.0.0.1:8000/api/')
+        const res = await fetch('http://127.0.0.1:8000/data/last')
         const details = await res.json();
         this.setState({
           details

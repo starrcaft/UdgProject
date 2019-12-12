@@ -14,7 +14,7 @@ class LogPage extends Component {
 
     async componentDidMount(){
       try {
-        const res = await fetch('http://127.0.0.1:8000/api/')
+        const res = await fetch('http://127.0.0.1:8000/data/')
         const details = await res.json();
         this.setState({
           details
@@ -27,7 +27,7 @@ class LogPage extends Component {
     render() {
         return (
             <div className="LogPage">
-                <h3 className="text-left">Log Page</h3>
+                <h3 className="text-left">Fail2ban Log Page</h3>
                 <h5 className="text-center">세부사항</h5>
                 <Table bordered hover>
                     <thead>

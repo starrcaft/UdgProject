@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework import generics
 
-from .models import Log, HistoryLog
-from .serializers import UfwLogSerializers, HistoryLogSerializers
+from .models import Log, HistoryLog, LastLog, LastBLog
+from .serializers import UfwLogSerializers, HistoryLogSerializers, LastLogSerializers, LastbLogSerializers
 # Create your views here.
 
 def list(request):
@@ -16,3 +16,11 @@ class DetailLog(generics.ListCreateAPIView) :
 class DetailHistoryLog(generics.ListCreateAPIView) :
     queryset = HistoryLog.objects.all()
     serializer_class = HistoryLogSerializers
+
+class DetailLastLog(generics.ListCreateAPIView) :
+    queryset = LastLog.objects.all()
+    serializer_class = LastLogSerializers
+
+class DetailLastbLog(generics.ListCreateAPIView) :
+    queryset = LastBLog.objects.all()
+    serializer_class = LastbLogSerializers

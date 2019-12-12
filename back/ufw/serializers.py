@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Log, HistoryLog
+from .models import Log, HistoryLog, LastLog, LastBLog
 
 class UfwLogSerializers(serializers.ModelSerializer) :
     class Meta :
@@ -17,3 +17,26 @@ class HistoryLogSerializers(serializers.ModelSerializer) :
         )
 
         model = HistoryLog
+
+class LastLogSerializers(serializers.ModelSerializer) :
+    class Meta :
+        fields = (
+            'user',
+            'pts',
+            'srcIP',
+            'date',
+        )
+
+        model = LastLog
+
+class LastbLogSerializers(serializers.ModelSerializer) :
+    class Meta :
+        fields = (
+            'user',
+            'protocol',
+            'srcIP',
+            'date',
+        )
+
+        model = LastBLog
+
