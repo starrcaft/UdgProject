@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Log
+from .models import Log, HistoryLog
 
 class UfwLogSerializers(serializers.ModelSerializer) :
     class Meta :
@@ -8,3 +8,12 @@ class UfwLogSerializers(serializers.ModelSerializer) :
             'desIP',
         )
         model = Log
+
+class HistoryLogSerializers(serializers.ModelSerializer) :
+    class Meta :
+        fields = (
+            'date',
+            'cmd',
+        )
+
+        model = HistoryLog
