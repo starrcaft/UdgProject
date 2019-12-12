@@ -20,6 +20,12 @@ class Main extends Component {
         });
     };
 
+    _goHistoryLog = () => {
+        this.setState({
+          pageStatus : 2,
+        });
+    };
+
     render(){
         const page = this.state.pageStatus;
         let currentPage;
@@ -35,6 +41,7 @@ class Main extends Component {
                         <Nav className="mr-auto">
                             <Nav.Link onClick={this._goLogPage}>Log Page</Nav.Link>
                             <Nav.Link onClick={this._goSU}>SU command</Nav.Link>
+                            <Nav.Link onClick={this._goHistoryLog}>History</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
