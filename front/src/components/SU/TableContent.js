@@ -4,9 +4,7 @@ class TableContent extends Component {
     render(){
         return(
             <tr>
-                <td>{this.props.id}</td>
-                <td>{this.props.ip}</td>
-                <td>{this.props.time}</td>
+                <td>{this.props.date}</td>
                 <td>{this.props.cmd}</td>
             </tr>
         )

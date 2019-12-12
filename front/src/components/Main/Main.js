@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Navbar, Nav, Card} from 'react-bootstrap';
 import LogPage from "../LogPage/LogPage";
 import SU from "../SU/SU";
+import LastLog from "../LastLog/LastLogPage"
+import LastbLog from "../LastbLog/LastbLogPage"
 
 class Main extends Component {
     state = {
@@ -20,9 +22,15 @@ class Main extends Component {
         });
     };
 
-    _goHistoryLog = () => {
+    _goLastLog = () => {
         this.setState({
           pageStatus : 2,
+        });
+    };
+
+    _goLastbLog = () => {
+        this.setState({
+          pageStatus : 3,
         });
     };
 
@@ -30,7 +38,9 @@ class Main extends Component {
         const page = this.state.pageStatus;
         let currentPage;
         if (page === 0) currentPage = <LogPage/>;
-        else currentPage = <SU/>;
+        else if (page == 1) currentPage = <SU/>;
+        else if (page == 2 ) currentPage = <LastLog/>;
+        else currentPage = <LastbLog/>;
 
         return (
             <div>
@@ -41,7 +51,8 @@ class Main extends Component {
                         <Nav className="mr-auto">
                             <Nav.Link onClick={this._goLogPage}>Log Page</Nav.Link>
                             <Nav.Link onClick={this._goSU}>SU command</Nav.Link>
-                            <Nav.Link onClick={this._goHistoryLog}>History</Nav.Link>
+                            <Nav.Link onClick={this._goLastLog}>Last</Nav.Link>
+                            <Nav.Link onClick={this._goLastbLog}>Lastb</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
