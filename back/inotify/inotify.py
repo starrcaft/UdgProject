@@ -10,10 +10,11 @@ class MyEventHandler(pyinotify.ProcessEvent):
             print(result)
 
 def inotify():
-    wm = pyinotify.WatchManager()
-    wm.add_watch('test.text', pyinotify.ALL_EVENTS, rec=True)
+    print('hi')
+    #wm = pyinotify.WatchManager()
+    #wm.add_watch('test.text', pyinotify.ALL_EVENTS, rec=True)
 
-    eh = MyEventHandler()
+    #eh = MyEventHandler()
 
-    notifier = pyinotify.Notifier(wm, eh)
-    notifier.loop()
+    #notifier = pyinotify.Notifier(wm, eh)
+    #notifier.loop()
